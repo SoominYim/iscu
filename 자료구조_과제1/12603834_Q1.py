@@ -84,10 +84,17 @@ def Q2_ds():
     while True :
         #작성부분 - ins_num 만큼 건너뛰면서 삭제하는 부분 작성
 
+        move_cnt = 1
+        while move_cnt < ins_num:
+            hw_list.tail = hw_list.tail.link
+            move_cnt += 1
+        del_data = hw_list.dequeue()
+        print(f'\n{del_data} 을(를) 리스트에서 삭제')
+
         ########
         hw_list.display()
         if(hw_list.isEmpty()):
             break
-     
+
 Q2_ds()
 
